@@ -9,7 +9,7 @@ html, body
 
 body 
 {
-    background-image: url('src/wallpaper.jpg');
+    background-image: url('images/wallpaper.jpg');
     background-size: cover; /* A imagem vai cobrir toda a tela */
     background-position: center center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
