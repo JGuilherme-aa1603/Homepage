@@ -1,5 +1,4 @@
-html, body 
-{
+html, body {
     height: 100%;
     margin: 0;
     display: flex;
@@ -7,33 +6,56 @@ html, body
     justify-content: center;
 }
 
-body 
-{
+body {
     background-image: url('images/wallpaper.jpg');
     background-size: cover; /* A imagem vai cobrir toda a tela */
     background-position: center center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
 }
 
-input 
-{
+.input-container {
+    position: relative;
+    width: 35vw; /* Largura do input */
+}
+
+input {
+    color: #e8e8e8;
     font-weight: lighter;
     font-size: 3.5vh;
     height: 8vh;
-    width: 35vw;
+    width: 100%;
     background: #303134;
     border-radius: 24px;
     border: 1px solid transparent;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 40px; /* Espaço para o ícone */
 }
 
-input:hover
-{
+input:hover {
     background: #5f6368;
 }
 
-input:focus
-{
+input:focus {
     outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%); /* Alinha verticalmente o ícone */
+    background: transparent;
+    border: none;
+    color: #e8e8e8;
+    cursor: pointer;
+    font-size: 1.5rem; /* Tamanho do ícone */
+}
+
+.search-icon:hover {
+    color: #5f6368; /* Altera a cor ao passar o mouse */
+}
+
+input::-webkit-autofill {
+    background-color: #4f4f4f !important;
+    color: red !important;
 }
