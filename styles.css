@@ -5,11 +5,11 @@ html, body
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 body 
 {
-    background-image: url('images/wallpaper.jpg');
     background-size: cover; 
     background-position: center center;
     background-repeat: no-repeat; 
@@ -18,24 +18,57 @@ body
 header
 {
     position: absolute;
+    top: 1%;
+    right: 1%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1vw;
+}
+
+header button
+{
+    background-color: #303134;
+    border-color: transparent;
+    border-radius: 35%;
+    cursor: pointer;
+}
+
+.lightMode
+{
+    height: 40px;
+    width: 40px;
+}
+
+.lightMode:hover
+{
+    transform: scale(1.1);
+}
+.user
+{
     display: flex;
     align-items: center;
     justify-content: center;
-    right: 1%;
-    top: 1%;
     height: 110px;
     width: 110px;
-    background-color: #303134;
     border-radius: 50%;
     overflow: hidden;
 }
 
-header img
+.user img
 {
-    height: 100%;
-    width: 100%;
+    height: 90%;
+    width: 90%;
     object-fit: cover;
+    border-radius: 50%;
 }
+
+.user img:hover
+{
+    transform: scale(1.05);
+}
+
 .principal 
 {
     display: flex;
@@ -64,15 +97,12 @@ input {
     padding-right: 40px; 
 }
 
-input:hover {
-    background: #45484a;
-}
-
 input:focus {
     outline: none;
 }
 
 .search-icon {
+
     position: absolute;
     right: 15px;
     top: 50%;
@@ -82,10 +112,6 @@ input:focus {
     color: #e8e8e8;
     cursor: pointer;
     font-size: 1.5rem;
-}
-
-.search-icon:hover {
-    color: #515357; 
 }
 
 .sites
@@ -125,6 +151,46 @@ input:focus {
 {
     width: 50px; 
     height: 50px; 
+}
+
+footer
+{
+    position: absolute;
+    display: flex;
+    width: 98%;
+    height: 10vh;
+    bottom: 2%;
+    align-items: center;
+    gap: 1vw;
+}
+
+footer button
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background-color:#303134;
+    border-color: transparent;
+    margin: 0%;
+    padding: 0%;
+    cursor: pointer;
+}
+
+footer img
+{
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    border-color: #303134;
+    object-fit: cover;
+}
+
+footer img:hover
+{
+    transform: scale(1.05);
 }
 
 @media only screen and (max-width: 768px)
