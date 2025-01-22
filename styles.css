@@ -10,9 +10,9 @@ html, body
 body 
 {
     background-image: url('images/wallpaper.jpg');
-    background-size: cover; /* A imagem vai cobrir toda a tela */
-    background-position: center center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat; 
 }
 
 header
@@ -48,7 +48,7 @@ header img
 
 .input-container {
     position: relative;
-    width: 35vw; /* Largura do input */
+    width: 35vw; 
 }
 
 input {
@@ -61,7 +61,7 @@ input {
     border-radius: 24px;
     border: 1px solid transparent;
     padding-left: 20px;
-    padding-right: 40px; /* Espaço para o ícone */
+    padding-right: 40px; 
 }
 
 input:hover {
@@ -76,16 +76,16 @@ input:focus {
     position: absolute;
     right: 15px;
     top: 50%;
-    transform: translateY(-50%); /* Alinha verticalmente o ícone */
+    transform: translateY(-50%); 
     background: transparent;
     border: none;
     color: #e8e8e8;
     cursor: pointer;
-    font-size: 1.5rem; /* Tamanho do ícone */
+    font-size: 1.5rem;
 }
 
 .search-icon:hover {
-    color: #515357; /* Altera a cor ao passar o mouse */
+    color: #515357; 
 }
 
 .sites
