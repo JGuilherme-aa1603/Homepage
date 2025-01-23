@@ -1,191 +1,119 @@
-let userid = localStorage.getItem("userid") ?? '0';  
-document.addEventListener("DOMContentLoaded", function()
-{
-    let body = document.getElementsByTagName("body")[0];
-    let userImage = document.querySelector("#userImage")
-    let userLink = document.querySelector(".user")
-    let principal = document.querySelector(".principal");
-    let sites = document.querySelector(".sites");
-    let link = sites.querySelectorAll("a");
-    let linkName = sites.querySelectorAll("p");
-    let siteLogo = sites.querySelectorAll("img")
-    let footerButton = document.querySelector("footer").querySelectorAll("button");
-
-    function normalui()
+const users = {
+    '0': 
     {
-        principal.style.position = "relative";
-        principal.style.bottom = "";
-        principal.style.top = "";
-        principal.style.flexDirection = "column";
-        principal.style.height = "20vh";
-
-        sites.style.height = "11vh";
-        sites.style.width = "100%";
-        sites.style.position = "";
-        sites.style.top = "";
-
-        link[0].href = "https://www.youtube.com";
-        siteLogo[0].src = "images/youtube.png";
-        siteLogo[0].alt = "youtube logo";
-        linkName[0].innerHTML = "Youtube";
-
-        link[1].href = "https://github.com";
-        siteLogo[1].src = "images/github.png";
-        siteLogo[1].alt = "github logo";
-        linkName[1].innerHTML = "Github";
-
-        link[2].href = "https://mail.google.com/mail/u/0/#inbox";
-        siteLogo[2].src = "images/gmail.png";
-        siteLogo[2].alt = "gmail logo";
-        linkName[2].innerHTML = "Gmail";
-
-        link[3].href = "https://chatgpt.com/"
-        siteLogo[3].src = "images/chatgpt.png"
-        siteLogo[3].alt = "chatgpt logo"
-        linkName[3].innerHTML = "ChatGpt";
-
-        link[4].href = "https://www.nexusmods.com/skyrimspecialedition"
-        siteLogo[4].src = "images/nexusmods.png"
-        siteLogo[4].alt = "nexusmods logo"
-        linkName[4].innerHTML = "Nexusmods";
-
-        link.forEach(link => {
-            link.style.borderRadius = "10px";
-            link.style.height = "11vh";
-            link.style.maxHeight = "";
-        })
-
-        siteLogo.forEach(siteLogo => {
-            siteLogo.style.position = "";
-        })
-
-        linkName.forEach(linkName => {
-            linkName.style.position = "";
-            linkName.style.marginTop = "";
-        })
-
-        footerButton.forEach(footerButton => {
-            footerButton.style.backgroundColor = "#303134";
-        });
-
-
-    }
-
-    function user(userid)
+        background: "url(images/wallpaperg.jpg)",
+        image: "images/userg.jpg",
+        link: "https://github.com/JGuilherme-aa1603"
+    },
+    '1': 
     {
-        normalui();
-        footerButton[userid].style.backgroundColor = "#44B350";
-        switch (userid)
-        {
-            case '0': /*Guilherme*/
-                document.body.style.backgroundImage = "url(images/wallpaperg.jpg)"; 
-                userImage.src = "images/userg.jpg"
-                userLink.href = "https://github.com/JGuilherme-aa1603";
-            break;
-
-            case '1': /*Pedro*/
-
-                link[0].href = "https://www.youtube.com";
-                siteLogo[0].src = "images/youtube.png";
-                siteLogo[0].alt = "youtube logo";
-                linkName[0].innerHTML = "Youtube";
-        
-                link[1].href = "https://github.com";
-                siteLogo[1].src = "images/github.png";
-                siteLogo[1].alt = "github logo";
-                linkName[1].innerHTML = "Github";
-        
-                link[2].href = "https://mail.google.com/mail/u/0/#inbox";
-                siteLogo[2].src = "images/gmail.png";
-                siteLogo[2].alt = "gmail logo";
-                linkName[2].innerHTML = "Gmail";
-        
-                link[3].href = "https://chatgpt.com/"
-                siteLogo[3].src = "images/chatgpt.png"
-                siteLogo[3].alt = "chatgpt logo"
-                linkName[3].innerHTML = "ChatGpt";
-        
-                link[4].href = "https://www.nexusmods.com/skyrimspecialedition"
-                siteLogo[4].src = "images/nexusmods.png"
-                siteLogo[4].alt = "nexusmods logo"
-                linkName[4].innerHTML = "Nexusmods";
-
-                principal.style.position = "absolute";
-                principal.style.bottom = "0%";
-                principal.style.flexDirection = "column-reverse";
-                principal.style.height = "15vh";
-
-                sites.style.position = "fixed";
-                sites.style.top = "0%";
-                sites.style.width = "70%"
-
-                userLink.href = "https://www.linkedin.com/in/pedro-almeida-2a0051222/";
-                document.body.style.backgroundImage = "url(images/wallpaperp.png)"; 
-                userImage.src = "images/userp.png"      
-            break;
-
-            case '2': /*Cauã*/
-                link[0].href = "https://www.youtube.com";
-                siteLogo[0].src = "images/youtube.png";
-                siteLogo[0].alt = "youtube logo";
-                linkName[0].innerHTML = "Youtube";
-
-                link[1].href = "https://www.twitch.tv/";
-                siteLogo[1].src = "https://assets.twitch.tv/assets/favicon-32-e29e246c157142c94346.png";
-                siteLogo[1].alt = "twitch logo";
-                linkName[1].innerHTML = "Twitch";
-
-                link[2].href = "https://mail.google.com/mail/u/0/#inbox";
-                siteLogo[2].src = "images/gmail.png";
-                siteLogo[2].alt = "gmail logo";
-                linkName[2].innerHTML = "Gmail";
-
-                link[3].href = "https://www.netflix.com/br/"
-                siteLogo[3].src = "https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.png"
-                siteLogo[3].alt = "netflix logo"
-                linkName[3].innerHTML = "Netflix";
-
-                link[4].href = "https://web.whatsapp.com/"
-                siteLogo[4].src = "https://static.whatsapp.net/rsrc.php/v4/yP/r/rYZqPCBaG70.png"
-                siteLogo[4].alt = "whatsapp logo"
-                linkName[4].innerHTML = "Whatsapp";
-
-                principal.style.position = "absolute";
-                principal.style.top = "20%";
-
-                link.forEach(link => {
-                    link.style.borderRadius = "100%";
-                    link.style.height = "5vw";
-                    link.style.maxHeight = "5vw";
-                })
-
-                siteLogo.forEach(siteLogo => {
-                    siteLogo.style.position = "absolute";
-                })
-
-                linkName.forEach(linkName => {
-                    linkName.style.position = "fixed";
-                    linkName.style.marginTop = "115px";
-                })
-
-
-                userLink.href = "https://www.vox.com/";
-                body.style.backgroundImage = "url(images/wallpaperc.jpg)";
-                userImage.src = "images/userc.jpg";
-            break;
-        }   
-        if (localStorage.getItem("userid") !== userid) {
-            localStorage.setItem("userid", userid);
-        }
-        console.log(userid)
-    }
-    user(userid)
-
-    for (let i = 0; i < footerButton.length; i++)
+        background: "url(images/wallpaperp.png)",
+        image: "images/userp.png",
+        link: "https://www.linkedin.com/in/pedro-almeida-2a0051222/"
+    },
+    '2':
     {
-        footerButton[i].addEventListener("click", function()
-    {
-        user('' + i);
-    });
-    }
-});
+        background: "url(images/wallpaperc.jpg)",
+        image: "images/userc.jpg",
+        link: "https://www.vox.com/"
+    },
+};
+
+const userSites = {
+    '0': [
+        { 
+            href: "https://www.youtube.com", 
+            src: "images/youtube.png", 
+            alt: "youtube logo", 
+            name: "Youtube" 
+        },
+        { 
+            href: "https://github.com", 
+            src: "images/github.png", 
+            alt: "github logo", 
+            name: "Github" 
+        },
+        { 
+            href: "https://mail.google.com/mail/u/0/#inbox", 
+            src: "images/gmail.png", 
+            alt: "gmail logo", 
+            name: "Gmail" 
+        },
+        { 
+            href: "https://chatgpt.com/", 
+            src: "images/chatgpt.png", 
+            alt: "chatgpt logo", 
+            name: "ChatGpt" 
+        },
+        { 
+            href: "https://www.nexusmods.com/skyrimspecialedition", 
+            src: "images/nexusmods.png", 
+            alt: "nexusmods logo", 
+            name: "Nexusmods" 
+        },
+    ],
+    '1': [
+        { 
+            href: "https://www.youtube.com", 
+            src: "images/youtube.png", 
+            alt: "youtube logo", 
+            name: "Youtube" 
+        },
+        { 
+            href: "https://github.com", 
+            src: "images/github.png", 
+            alt: "github logo", 
+            name: "Github" 
+        },
+        { 
+            href: "https://mail.google.com/mail/u/0/#inbox", 
+            src: "images/gmail.png", 
+            alt: "gmail logo", 
+            name: "Gmail" 
+        },
+        { 
+            href: "https://chatgpt.com/", 
+            src: "images/chatgpt.png", 
+            alt: "chatgpt logo", 
+            name: "ChatGpt" 
+        },
+        { 
+            href: "https://www.nexusmods.com/skyrimspecialedition", 
+            src: "images/nexusmods.png", 
+            alt: "nexusmods logo", 
+            name: "Nexusmods" 
+        },
+    ],
+    '2': [
+        { 
+            href: "https://www.youtube.com", 
+            src: "images/youtube.png", 
+            alt: "youtube logo", 
+            name: "Youtube" 
+        },
+        { 
+            href: "https://www.twitch.tv/", 
+            src: "https://assets.twitch.tv/assets/favicon-32-e29e246c157142c94346.png", 
+            alt: "twitch logo", 
+            name: "Twitch" 
+        },
+        { 
+            href: "https://mail.google.com/mail/u/0/#inbox", 
+            src: "images/gmail.png", 
+            alt: "gmail logo", 
+            name: "Gmail" 
+        },
+        { 
+            href: "https://www.netflix.com/br/",
+            src: "https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.png",
+            alt: "netflix logo",
+            name: "Netflix"
+        },
+        { 
+            href: "https://web.whatsapp.com/",
+            src: "https://static.whatsapp.net/rsrc.php/v4/yP/r/rYZqPCBaG70.png",
+            alt: "whatsapp logo",
+            name: "Whatsapp"
+        },
+    ]
+};

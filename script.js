@@ -4,7 +4,6 @@ if (!theme)
     theme = "dark"
 } 
 
-
 function checkInput()
 {
     let inputValue = document.getElementById("searchInput").value;
@@ -25,83 +24,57 @@ document.addEventListener("DOMContentLoaded", function()
     let searchIcon = document.querySelector(".search-icon");
     let sites = document.querySelectorAll("a");
 
-    function hoverDark()
+    function hoverEffect(inputColor, hoverInputColor, searchColor, hoverSearchColor)
     {
         form.addEventListener("mouseover", function()
         {
-            input.style.backgroundColor = "#45484a"
+            input.style.backgroundColor = inputColor;
         })
         form.addEventListener("mouseleave", function()
         {
-            input.style.backgroundColor = "#303134";
+            input.style.backgroundColor = hoverInputColor;
         })
         searchIcon.addEventListener("mouseover", function()
         {
-            searchIcon.style.color = "#717378";
+            searchIcon.style.color = searchColor;
         })
         searchIcon.addEventListener("mouseleave", function()
         {
-            searchIcon.style.color = "#e8e8e8";
+            searchIcon.style.color = hoverSearchColor;
         })
     };
 
-    function hoverLight()
+    function styleAll(bgColor, color)
     {
-        form.addEventListener("mouseover", function()
-        {
-            input.style.backgroundColor = "#b3b3b3"
-        })
-        form.addEventListener("mouseleave", function()
-        {
-            input.style.backgroundColor = "#e8e8e8";
-        })
-        searchIcon.addEventListener("mouseover", function()
-        {
-            searchIcon.style.color = "#717277";
-        })
-        searchIcon.addEventListener("mouseleave", function()
-        {
-            searchIcon.style.color = "#303134";
-        })
+        input.style.backgroundColor = bgColor;
+        input.style.color = color;
+        button.style.backgroundColor = bgColor;
+        searchIcon.style.color = color;
+
+        sites.forEach(site => {
+            site.style.backgroundColor = bgColor;
+            site.style.color = color;
+        });
+
+        footerButon.forEach(footerButon => {
+            footerButon.style.backgroundColor = bgColor;
+        });
+
     }
-    
     function applyTheme(currentTheme)
     {
         let userid = localStorage.getItem("userid") ?? '0';  
             if (currentTheme === "dark")
             {
-                button.style.backgroundColor = "#e8e8e8";
-                footerButon.forEach(footerButon =>
-                    footerButon.style.backgroundColor = "#e8e8e8"
-                )
                 icon.src = "https://img.icons8.com/?size=100&id=60002&format=png&color=000000";
-                input.style.backgroundColor = "#e8e8e8";
-                input.style.color = "#303134";
-                searchIcon.style.color = "#303134";
-                sites.forEach(site => 
-                    {
-                    site.style.backgroundColor = "#e8e8e8";
-                    site.style.color = "#303134";
-                    });
-                hoverLight();
+                styleAll("#e8e8e8", "#303134");
+                hoverEffect("#b3b3b3", "#e8e8e8", "#717277", "#303134");
             }
             else
             {
-                button.style.backgroundColor = "#303134";
-                footerButon.forEach(footerButon =>
-                    footerButon.style.backgroundColor = "#303134"
-                )
                 icon.src = "https://img.icons8.com/?size=100&id=vEAgTwhMAu1R&format=png&color=e8e8e8";
-                input.style.backgroundColor = "#303134";
-                input.style.color = "#e8e8e8"
-                searchIcon.style.color = "#e8e8e8";
-                sites.forEach(site => 
-                    {
-                    site.style.backgroundColor = "#303134";
-                    site.style.color = "#e8e8e8";
-                    });
-
-                hoverDark();
+                styleAll("#303134", "#e8e8e8");
+                hoverEffect("#45484a", "#303134", "#717378", "#e8e8e8");
             }
             footerButon[userid].style.backgroundColor = "#44B350";
             localStorage.setItem("theme", currentTheme);
@@ -109,9 +82,9 @@ document.addEventListener("DOMContentLoaded", function()
     applyTheme(theme);
     
     button.addEventListener("click", function()
-        {
-            theme = theme === "dark" ? "light" : "dark";
-            applyTheme(theme); 
-        })
+    {
+        theme = theme === "dark" ? "light" : "dark";
+        applyTheme(theme); 
+    })
 
 });
