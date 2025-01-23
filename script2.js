@@ -109,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function()
 
                 sites.style.position = "fixed";
                 sites.style.top = "0%";
+                sites.style.width = "70%"
 
                 userLink.href = "https://www.linkedin.com/in/pedro-almeida-2a0051222/";
                 document.body.style.backgroundImage = "url(images/wallpaperp.png)"; 
@@ -143,6 +144,8 @@ document.addEventListener("DOMContentLoaded", function()
 
                 principal.style.position = "absolute";
                 principal.style.top = "20%";
+
+                sites.style.width = "100%"
 
                 link.forEach(link => {
                     link.style.borderRadius = "100%";
