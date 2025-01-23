@@ -1,6 +1,6 @@
+let userid = localStorage.getItem("userid") ?? '0';  
 document.addEventListener("DOMContentLoaded", function()
 {
-    let userid = localStorage.getItem("userid") ?? '0';    
     let body = document.getElementsByTagName("body")[0];
     let userImage = document.querySelector("#userImage")
     let userLink = document.querySelector(".user")
@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function()
     let link = sites.querySelectorAll("a");
     let linkName = sites.querySelectorAll("p");
     let siteLogo = sites.querySelectorAll("img")
+    let footerButton = document.querySelector("footer").querySelectorAll("button");
 
     function normalui()
     {
@@ -63,11 +64,17 @@ document.addEventListener("DOMContentLoaded", function()
             linkName.style.marginTop = "";
         })
 
+        footerButton.forEach(footerButton => {
+            footerButton.style.backgroundColor = "#303134";
+        });
+
+
     }
 
     function user(userid)
     {
         normalui();
+        footerButton[userid].style.backgroundColor = "#44B350";
         switch (userid)
         {
             case '0': /*Guilherme*/
@@ -173,7 +180,6 @@ document.addEventListener("DOMContentLoaded", function()
         console.log(userid)
     }
     user(userid)
-    let footerButton = document.querySelector("footer").querySelectorAll("button");
 
     for (let i = 0; i < footerButton.length; i++)
     {

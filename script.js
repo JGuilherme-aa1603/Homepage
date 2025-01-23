@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function()
     
     function applyTheme(currentTheme)
     {
+        let userid = localStorage.getItem("userid") ?? '0';  
             if (currentTheme === "dark")
             {
                 button.style.backgroundColor = "#e8e8e8";
@@ -102,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function()
 
                 hoverDark();
             }
+            footerButon[userid].style.backgroundColor = "#44B350";
             localStorage.setItem("theme", currentTheme);
     }
     applyTheme(theme);
