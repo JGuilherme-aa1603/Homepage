@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function()
         principal.style.height = "20vh";
 
         sites.style.height = "11vh";
+        sites.style.width = "100%";
         sites.style.position = "";
         sites.style.top = "";
 
@@ -144,8 +145,6 @@ document.addEventListener("DOMContentLoaded", function()
 
                 principal.style.position = "absolute";
                 principal.style.top = "20%";
-
-                sites.style.width = "100%"
 
                 link.forEach(link => {
                     link.style.borderRadius = "100%";
