@@ -7,12 +7,12 @@ document.addEventListener("DOMContentLoaded", function()
     }
     
     body = document.getElementsByTagName("body")[0];
-    userImage = document.querySelector("#userImage")
+    let userImage = document.querySelector("#userImage")
+    let userLink = document.querySelector(".user")
+    let principal = document.querySelector(".principal");
+    let sites = document.querySelector(".sites");
     function normalui()
     {
-        let principal = document.querySelector(".principal");
-        let sites = document.querySelector(".sites");
-
         principal.style.position = "relative";
         principal.style.bottom = "";
         principal.style.flexDirection = "column";
@@ -29,12 +29,11 @@ document.addEventListener("DOMContentLoaded", function()
             case '0': /*Guilherme*/
             document.body.style.backgroundImage = "url(images/wallpaperg.jpg)"; 
             userImage.src = "images/userg.jpg"
+            userLink.href = "https://github.com/JGuilherme-aa1603";
             normalui();
             break;
 
             case '1': /*Pedro*/
-            let principal = document.querySelector(".principal");
-            let sites = document.querySelector(".sites");
 
             principal.style.position = "absolute";
             principal.style.bottom = "0%";
@@ -43,6 +42,8 @@ document.addEventListener("DOMContentLoaded", function()
 
             sites.style.position = "fixed";
             sites.style.top = "0%";
+
+            userLink.href = "https://www.linkedin.com/in/pedro-almeida-2a0051222/";
             document.body.style.backgroundImage = "url(images/wallpaperp.png)"; 
             userImage.src = "images/userp.png"
             
