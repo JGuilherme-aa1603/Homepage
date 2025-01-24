@@ -12,42 +12,26 @@ document.addEventListener("DOMContentLoaded", function()
 
     function normalui()
     {
-        principal.style.position = "relative";
-        principal.style.bottom = "";
-        principal.style.top = "";
-        principal.style.flexDirection = "column";
-        principal.style.height = "20vh";
-
-        sites.style.height = "11vh";
-        sites.style.width = "100%";
-        sites.style.position = "";
-        sites.style.top = "";
+        principal.id = "";
+        sites.id = "";
 
         link.forEach(link => {
-            link.style.borderRadius = "10px";
-            link.style.height = "11vh";
-            link.style.maxHeight = "";
+                    link.id = ""
         })
-
-        siteLogo.forEach(siteLogo => {
-            siteLogo.style.position = "";
-        })
-
         linkName.forEach(linkName => {
-            linkName.style.position = "";
-            linkName.style.marginTop = "";
+            linkName.id = ""
         })
 
         footerButton.forEach(footerButton => {
             footerButton.style.backgroundColor = "#303134";
         });
 
-
     }
 
     function user(userid)
     {
         normalui();
+        /*Usuario ativo com contorno verde*/
         footerButton[userid].style.backgroundColor = "#44B350";
 
         /*User - Background, Imagem, Link*/
@@ -70,37 +54,29 @@ document.addEventListener("DOMContentLoaded", function()
             break;
 
             case '1': /*Pedro*/
-
-                principal.style.position = "absolute";
-                principal.style.bottom = "0%";
-                principal.style.flexDirection = "column-reverse";
-                principal.style.height = "15vh";
-
-                sites.style.position = "fixed";
-                sites.style.top = "0%";
-                sites.style.width = "70%"
-
+                principal.id = "pedroPrincipal";
+                sites.id = "pedroSites";
             break;
 
             case '2': /*Cauã*/
-                principal.style.position = "absolute";
-                principal.style.top = "20%";
+                principal.id = "cauaPrincipal";
 
                 link.forEach(link => {
-                    link.style.borderRadius = "100%";
-                    link.style.height = "5vw";
-                    link.style.maxHeight = "5vw";
+                    link.id = "cauaLink"
                 })
-
-                siteLogo.forEach(siteLogo => {
-                    siteLogo.style.position = "absolute";
-                })
-
                 linkName.forEach(linkName => {
-                    linkName.style.position = "fixed";
-                    linkName.style.marginTop = "115px";
+                    linkName.id = "cauaLinkName"
                 })
             break;
+
+            case '3': /*Iunah*/
+                principal.id = "iunahPrincipal";
+            break;
+
+            case '4': /*Dorgival*/
+                principal.id = "dorgivalPrincipal";
+                sites.id = "dorgivalSites"
+            break
         }   
         if (localStorage.getItem("userid") !== userid) {
             localStorage.setItem("userid", userid);

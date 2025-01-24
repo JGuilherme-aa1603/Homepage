@@ -83,12 +83,14 @@ header button
     z-index: 2;
 }
 
-.input-container {
+.input-container 
+{
     position: relative;
     width: 35vw; 
 }
 
-input {
+input 
+{
     color: #e8e8e8;
     font-weight: lighter;
     font-size: 3.5vh;
@@ -101,11 +103,13 @@ input {
     padding-right: 40px; 
 }
 
-input:focus {
+input:focus 
+{
     outline: none;
 }
 
-.search-icon {
+.search-icon 
+{
 
     position: absolute;
     right: 15px;
@@ -121,7 +125,7 @@ input:focus {
 .sites
 {
     display: flex;
-    width: 70%;
+    width: 100%;
     height: 5vh;
     justify-content: center;
     gap: 1vw;
@@ -167,11 +171,14 @@ footer
 {
     position: absolute;
     display: flex;
-    width: 98%;
-    height: 10vh;
+    flex-wrap: wrap-reverse;
+    width: 16%;
+    height: auto;
+    left: 1%;
     bottom: 2%;
     align-items: center;
     gap: 1vw;
+    z-index: 2;
 }
 
 footer button
@@ -179,9 +186,9 @@ footer button
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
     background-color:#303134;
     border-color: transparent;
     margin: 0%;
@@ -201,6 +208,58 @@ footer img
 footer img:hover
 {
     transform: scale(1.05);
+}
+
+#pedroPrincipal
+{
+    position: absolute;
+    bottom: 0%;
+    flex-direction: column-reverse;
+    height: 15vh;
+}
+
+#pedroSites
+{
+    position: fixed;
+    top: 0%;
+    width: 70%;
+}
+
+#cauaPrincipal 
+{
+    position: absolute;
+    top: 20%;
+}
+
+#cauaLink
+{
+    border-radius: 100%;
+    height: 5vw;
+    max-height: 5vw;
+}
+
+#cauaLinkName
+{
+    position: absolute;
+    color: transparent;
+}
+
+#iunahPrincipal
+{
+    position: absolute;
+    bottom: 10%;
+}
+
+#dorgivalPrincipal
+{
+    position: absolute;
+    top: -5%;
+}
+
+#dorgivalSites
+{
+    position: fixed;
+    bottom: 11%;
 }
 
 @media only screen and (max-width: 768px)
