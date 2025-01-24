@@ -22,9 +22,18 @@ document.addEventListener("DOMContentLoaded", function()
             linkName.id = ""
         })
 
-        footerButton.forEach(footerButton => {
-            footerButton.style.backgroundColor = "#303134";
-        });
+        if (theme === "light")
+        {
+            footerButton.forEach(footerButton => {
+                footerButton.style.backgroundColor = "#303134";
+            });
+        }
+        else
+        {
+            footerButton.forEach(footerButton => {
+                footerButton.style.backgroundColor = "#e8e8e8";
+            });
+        }
 
     }
 
