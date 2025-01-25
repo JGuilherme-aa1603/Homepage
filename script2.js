@@ -23,7 +23,13 @@ const users = {
         image: "images/useri.png",
         link: "https://www.instagram.com/iunahhh/"
     },
-    '4': /*Dorgival*/
+    '4': /*Laudice*/
+    {
+        background: "url(images/wallpaperl.jpg)",
+        image: "images/userl.png",
+        link: "https://www.linkedin.com/in/laudice-albuquerque-650900207/"
+    },
+    '5': /*Dorgival*/
     {
         background: "url(images/wallpaperd.jpg)",
         image: "images/userd.png",
@@ -160,7 +166,39 @@ const userSites = {
             name: "Nexusmods" 
         },
     ],
-    '4': [/*Dorgival*/
+    '4': [/*Laudice*/
+        { 
+            href: "https://www.youtube.com", 
+            src: "images/youtube.png", 
+            alt: "youtube logo", 
+            name: "Youtube" 
+        },
+        { 
+            href: "https://drive.google.com/drive/my-drive?hl=pt-br", 
+            src: "images/drive.png", 
+            alt: "google drive logo", 
+            name: "Drive" 
+        },
+        { 
+            href: "https://mail.google.com/mail/u/0/#inbox", 
+            src: "images/gmail.png", 
+            alt: "gmail logo", 
+            name: "Gmail" 
+        },
+        { 
+            href: "https://www.septemcapulus.com/", 
+            src: "https://static.wixstatic.com/media/d10728_dd24b6a2965c44aa80f8bffb8e4c2e65%7Emv2.jpg/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/d10728_dd24b6a2965c44aa80f8bffb8e4c2e65%7Emv2.jpg", 
+            alt: "septem capulus logo", 
+            name: "Septem Capulus" 
+        },
+        { 
+            href: "https://web.whatsapp.com/",
+            src: "https://static.whatsapp.net/rsrc.php/v4/yP/r/rYZqPCBaG70.png",
+            alt: "whatsapp logo",
+            name: "Whatsapp"
+        },
+    ],
+    '5': [/*Dorgival*/
         { 
             href: "https://www.youtube.com", 
             src: "images/youtube.png", 

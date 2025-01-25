@@ -82,10 +82,12 @@ document.addEventListener("DOMContentLoaded", function()
                 principal.id = "iunahPrincipal";
             break;
 
-            case '4': /*Dorgival*/
+            case '4': /*Laudice*/
+            break;
+            case '5': /*Dorgival*/
                 principal.id = "dorgivalPrincipal";
                 sites.id = "dorgivalSites"
-            break
+            break;
         }   
         if (localStorage.getItem("userid") !== userid) {
             localStorage.setItem("userid", userid);
