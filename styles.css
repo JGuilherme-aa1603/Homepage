@@ -173,7 +173,7 @@ footer
     position: absolute;
     display: flex;
     flex-wrap: wrap-reverse;
-    width: 16%;
+    width: 250px;
     height: auto;
     left: 1%;
     bottom: 2%;
