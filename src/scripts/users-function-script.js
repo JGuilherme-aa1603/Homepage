@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function()
 
     }
 
-    function userUI(userid)
+    window.userUI = function(userid)
     {
         /* Aplly normalUI for avoid bugs */
         normalUI();

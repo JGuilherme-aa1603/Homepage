@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function()
     let usersContainer = document.querySelector(".footer-users")
 
     /* Apply theme when button is pressed */
-    function applyTheme(currentTheme)
+    window.applyTheme = function(currentTheme)
     {
         const rootStyles = getComputedStyle(document.documentElement);
 
@@ -54,10 +54,12 @@ document.addEventListener("DOMContentLoaded", function()
 
     usersContainer.style.display = hide ? "none" : "flex";
 
-    hideButton.addEventListener("click", function(){
+    window.hideFunction = function()
+    {
         hide = !hide; 
         usersContainer.style.display = hide ? "none" : "flex";
         localStorage.setItem("hide", hide);
-    });
+    }
+    hideButton.addEventListener("click", hideFunction);
 
 });
