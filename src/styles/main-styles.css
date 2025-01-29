@@ -213,6 +213,7 @@ footer
     border-color: transparent;
     border-radius: 35%;
     cursor: pointer;
+    transition: all 0.5s ease;
 }
 
 #hide-users img
