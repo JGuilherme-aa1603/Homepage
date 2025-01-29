@@ -171,121 +171,71 @@ input:focus
 
 footer
 {
+    display: flex;
+    flex-direction: column;
     position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1%;
+}
+
+#hide-users
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 10% 3.5%;
+    width: 40px;
+    height: 40px;
+    background-color: #303134;
+    border-color: transparent;
+    border-radius: 35%;
+    cursor: pointer;
+}
+
+.hide-users__icon
+{
+    height: 80%;
+    width: 80%;
+    object-fit: cover;
+}
+
+.footer-users
+{
     display: flex;
     flex-wrap: wrap-reverse;
     width: 250px;
     height: auto;
-    left: 1%;
-    bottom: 2%;
     align-items: center;
     gap: 1vw;
     z-index: 2;
 }
 
-footer button
+.footer-users button
 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
-    width: 60px;
+    height: 59px;
+    width: 59px;
     border-radius: 100%;
-    background-color:#303134;
     border-color: transparent;
+    background-color: #303134;
     margin: 0%;
     padding: 0%;
     cursor: pointer;
+    overflow: hidden;
 }
 
-footer img
+.footer-users img
 {
-    height: 90%;
-    width: 90%;
-    border-radius: 50%;
-    border-color: #303134;
+    height: 87%;
+    width: 87%;
+    border-radius: 100%;
     object-fit: cover;
 }
 
 footer img:hover
 {
     transform: scale(1.05);
-}
-
-#pedroPrincipal
-{
-    position: absolute;
-    bottom: 0%;
-    flex-direction: column-reverse;
-    height: 15vh;
-}
-
-#pedroSites
-{
-    position: fixed;
-    top: 0%;
-    width: 70%;
-}
-
-#cauaPrincipal 
-{
-    position: absolute;
-    top: 15%;
-}
-
-#cauaLink
-{
-    border-radius: 100%;
-    height: 5vw;
-    max-height: 5vw;
-}
-
-#cauaLinkName
-{
-    position: absolute;
-    color: transparent;
-}
-
-#iunahPrincipal
-{
-    position: absolute;
-    bottom: 10%;
-}
-
-#dorgivalPrincipal
-{
-    position: absolute;
-    top: -5%;
-}
-
-#dorgivalSites
-{
-    position: fixed;
-    bottom: 11%;
-}
-
-@media only screen and (max-width: 768px)
-{
-    .principal
-    {
-        height: 10vh;
-        width: 90%;
-    }
-
-    .input-container
-    {
-        width: 100%;
-    }
-
-    .sites
-    {
-        height: 100%;
-        width: 100%;
-    }
-
-    .sites a
-    {
-        width: 18%;
-        max-width: 18%;
-    }
 }

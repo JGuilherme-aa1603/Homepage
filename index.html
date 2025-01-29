@@ -5,17 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home Page</title>
 
-        <script src="src/scripts/theme-script.js"></script>
+        <script src="src/scripts/theme-hide-script.js"></script>
         <script src="src/scripts/users-script.js"></script>
         <script src="src/scripts/users-function-script.js"></script>
 
-        <link rel="stylesheet" href="src/styles/styles.css">
+        <link rel="stylesheet" href="src/styles/reset.css">
+        <link rel="stylesheet" href="src/styles/main-styles.css">
+        <link rel="stylesheet" href="src/styles/users-styles.css">
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     </head>
     <body>
         <header>
-            <button>
+            <button id="theme-button">
                 <img class="lightMode" src="https://img.icons8.com/?size=100&id=vEAgTwhMAu1R&format=png&color=e8e8e8" alt="Light Mode">
             </button>
             <a class="user" href="https://github.com/JGuilherme-aa1603">
@@ -56,24 +59,29 @@
             </div>
         </div>
         <footer>
-            <button>
-                <img src="src/assets/userg.jpg" alt="Foto do Guilherme">
+            <button id="hide-users">
+                <img class="hide-users__icon" src="https://img.icons8.com/?size=100&id=98957&format=png&color=FFFFFF" alt="">
             </button>
-            <button>
-                <img src="src/assets/userp.png" alt="Foto do Pedro">
-            </button>
-            <button>
-                <img src="src/assets/userc.jpg" alt="Foto do Caua">
-            </button>
-            <button>
-                <img src="src/assets/useri.png" alt="Foto da Iunah">
-            </button>
-            <button>
-                <img src="src/assets/userl.png" alt="Foto da Laudice">
-            </button>
-            <button>
-                <img src="src/assets/userd.png" alt="Foto do Dorgival">
-            </button>
+            <div class="footer-users">
+                <button>
+                    <img src="src/assets/userg.jpg" alt="Foto do Guilherme">
+                </button>
+                <button>
+                    <img src="src/assets/userp.png" alt="Foto do Pedro">
+                </button>
+                <button>
+                    <img src="src/assets/userc.jpg" alt="Foto do Caua">
+                </button>
+                <button>
+                    <img src="src/assets/useri.png" alt="Foto da Iunah">
+                </button>
+                <button>
+                    <img src="src/assets/userl.png" alt="Foto da Laudice">
+                </button>
+                <button>
+                    <img src="src/assets/userd.png" alt="Foto do Dorgival">
+                </button>
+            </div>
         </footer>
     </body>
 </html>

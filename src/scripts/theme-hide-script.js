@@ -1,8 +1,10 @@
 let theme = localStorage.getItem("theme");
 if (!theme) 
 {
-    theme = "dark"
+    theme = "dark";
 } 
+
+let hide = localStorage.getItem("hide") === "true";
 
 function checkInput()
 {
@@ -16,9 +18,12 @@ function checkInput()
 
 document.addEventListener("DOMContentLoaded", function()
 {
-    let button = document.querySelector("button");
-    let icon = button.querySelector("img");
-    let footerButon = document.querySelector("footer").querySelectorAll("button");
+    let themeButton = document.querySelector("#theme-button");
+    let hideButton = document.querySelector("#hide-users");
+    let hideIcon = hideButton.querySelector("img");
+    let themeIcon = themeButton.querySelector("img");
+    let usersContainer = document.querySelector(".footer-users")
+    let footerButton = usersContainer.querySelectorAll("button");
     let form = document.querySelector("form");
     let input = document.querySelector("input");
     let searchIcon = document.querySelector(".search-icon");
@@ -48,7 +53,8 @@ document.addEventListener("DOMContentLoaded", function()
     {
         input.style.backgroundColor = bgColor;
         input.style.color = color;
-        button.style.backgroundColor = bgColor;
+        themeButton.style.backgroundColor = bgColor;
+        hideButton.style.backgroundColor = bgColor;
         searchIcon.style.color = color;
 
         sites.forEach(site => {
@@ -56,8 +62,8 @@ document.addEventListener("DOMContentLoaded", function()
             site.style.color = color;
         });
 
-        footerButon.forEach(footerButon => {
-            footerButon.style.backgroundColor = bgColor;
+        footerButton.forEach(footerButton => {
+            footerButton.style.backgroundColor = bgColor;
         });
 
     }
@@ -66,25 +72,42 @@ document.addEventListener("DOMContentLoaded", function()
         let userid = localStorage.getItem("userid") ?? '0';  
             if (currentTheme === "dark")
             {
-                icon.src = "https://img.icons8.com/?size=100&id=60002&format=png&color=000000";
+                hideIcon.src = "https://img.icons8.com/?size=100&id=98957&format=png&color=303134";
+                themeIcon.src = "https://img.icons8.com/?size=100&id=60002&format=png&color=303134";
                 styleAll("#e8e8e8", "#303134");
                 hoverEffect("#b3b3b3", "#e8e8e8", "#717277", "#303134");
             }
             else
             {
-                icon.src = "https://img.icons8.com/?size=100&id=vEAgTwhMAu1R&format=png&color=e8e8e8";
+                hideIcon.src = "https://img.icons8.com/?size=100&id=98957&format=png&color=e8e8e8"
+                themeIcon.src = "https://img.icons8.com/?size=100&id=vEAgTwhMAu1R&format=png&color=e8e8e8";
                 styleAll("#303134", "#e8e8e8");
                 hoverEffect("#45484a", "#303134", "#717378", "#e8e8e8");
             }
-            footerButon[userid].style.backgroundColor = "#44B350";
+            footerButton[userid].style.backgroundColor = "#44B350";
             localStorage.setItem("theme", currentTheme);
     }
     applyTheme(theme);
     
-    button.addEventListener("click", function()
+    themeButton.addEventListener("click", function()
     {
         theme = theme === "dark" ? "light" : "dark";
         applyTheme(theme); 
     })
+
+
+    usersContainer.style.display = hide ? "none" : "flex";
+    function hideUsers() {
+        console.log("Antes de alternar:", hide); /*remover*/
+    
+        hide = !hide; 
+    
+        usersContainer.style.display = hide ? "none" : "flex";
+
+        localStorage.setItem("hide", hide);
+    
+        console.log("Depois de alternar:", hide); /*remover*/
+    }
+    hideButton.addEventListener("click", hideUsers);
 
 });

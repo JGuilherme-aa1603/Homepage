@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function()
     let link = sites.querySelectorAll("a");
     let linkName = sites.querySelectorAll("p");
     let siteLogo = sites.querySelectorAll("img")
-    let footerButton = document.querySelector("footer").querySelectorAll("button");
+    let footerButton = document.querySelector(".footer-users").querySelectorAll("button");
 
     function normalui()
     {
