@@ -1,4 +1,5 @@
 let userid = localStorage.getItem("userid") ?? '0';  
+
 document.addEventListener("DOMContentLoaded", function()
 {
     let userImage = document.querySelector("#userImage")
@@ -10,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function()
     let siteLogo = sites.querySelectorAll("img")
     let footerButton = document.querySelector(".footer-users").querySelectorAll("button");
 
-    function normalui()
+    function normalUI()
     {
         principal.id = "";
         sites.id = "";
@@ -22,33 +23,26 @@ document.addEventListener("DOMContentLoaded", function()
             linkName.id = ""
         })
 
-        if (theme === "light")
-        {
-            footerButton.forEach(footerButton => {
-                footerButton.style.backgroundColor = "#303134";
-            });
-        }
-        else
-        {
-            footerButton.forEach(footerButton => {
-                footerButton.style.backgroundColor = "#e8e8e8";
-            });
-        }
+        footerButton.forEach(footerButton => {
+            footerButton.style.backgroundColor = "var(--bg-color-main)";
+        });
 
     }
 
-    function user(userid)
+    function userUI(userid)
     {
-        normalui();
-        /*Usuario ativo com contorno verde*/
+        /* Aplly normalUI for avoid bugs */
+        normalUI();
+
+        /* Add green border for active user */
         footerButton[userid].style.backgroundColor = "#44B350";
 
-        /*User - Background, Imagem, Link*/
+        /*User - Background, Image, Link*/
         document.body.style.backgroundImage = users[userid].background;
         userImage.src = users[userid].image;
         userLink.href = users[userid].link;
 
-        /*Sites - icones, links e nome*/
+        /*Sites - icons, links and names*/
         const sitesConfig = userSites[userid];
         sitesConfig.forEach((site, index) => {
             link[index].href = site.href;
@@ -89,18 +83,19 @@ document.addEventListener("DOMContentLoaded", function()
                 sites.id = "dorgivalSites"
             break;
         }   
+        /* Saves userid if the valor is exchanged */
         if (localStorage.getItem("userid") !== userid) {
             localStorage.setItem("userid", userid);
         }
         console.log(userid)
     }
-    user(userid)
+    userUI(userid)
 
     for (let i = 0; i < footerButton.length; i++)
     {
         footerButton[i].addEventListener("click", function()
     {
-        user('' + i);
+        userUI('' + i);
     });
     }
 });
