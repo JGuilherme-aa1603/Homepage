@@ -1,3 +1,4 @@
+@media (prefers-color-scheme: no-preference) {
 @media only screen and (max-width: 768px)
 {
     .principal
@@ -71,4 +72,5 @@
         height: 16vw;
         width: 12vw;
     }
+}
 }

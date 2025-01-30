@@ -15,6 +15,8 @@ body
     background-repeat: no-repeat; 
 }
 
+@media (prefers-color-scheme: no-preference) {
+
 header
 {
     position: absolute;
@@ -283,4 +285,6 @@ footer
 footer img:hover
 {
     transform: scale(1.05);
+}
+
 }
