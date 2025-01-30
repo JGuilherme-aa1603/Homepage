@@ -30,24 +30,32 @@ document.addEventListener("DOMContentLoaded", function()
     };
   
     document.addEventListener('keydown', function(event) {
-        let keyCombo = '';
 
-        if (event.altKey) keyCombo += 'Alt+';
-        else if (event.shiftKey) keyCombo += 'Shift+';
-
-        keyCombo += event.key;
-
-
-        if (keyCombo.startsWith('Alt+')) {
-
-            let num = event.key;
-            shortcuts['Alt+num'](num);
-            event.preventDefault();
+        if (document.activeElement.tagName === "INPUT" || document.activeElement.tagName === "TEXTAREA") {
+            return;
         }
-        else if (shortcuts[keyCombo]) 
+
+        else
         {
-            event.preventDefault(); 
-            shortcuts[keyCombo](); 
+            let keyCombo = '';
+
+            if (event.altKey) keyCombo += 'Alt+';
+            else if (event.shiftKey) keyCombo += 'Shift+';
+
+            keyCombo += event.key;
+
+
+            if (keyCombo.startsWith('Alt+')) {
+
+                let num = event.key;
+                shortcuts['Alt+num'](num);
+                event.preventDefault();
+            }
+            else if (shortcuts[keyCombo]) 
+            {
+                event.preventDefault(); 
+                shortcuts[keyCombo](); 
+            }
         }
 });
   
