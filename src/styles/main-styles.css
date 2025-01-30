@@ -122,6 +122,11 @@ input:focus
     outline: none;
 }
 
+input::-ms-reveal {
+    display: none;
+    appearance: none;
+}
+
 .search-icon 
 {
 
