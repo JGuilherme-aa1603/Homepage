@@ -59,6 +59,12 @@ document.addEventListener("DOMContentLoaded", function()
             case '1': /*Pedro*/
                 principal.id = "pedroPrincipal";
                 sites.id = "pedroSites";
+                link.forEach(link => {
+                    link.id = "pedroLink"
+                })
+                linkName.forEach(linkName => {
+                    linkName.id = "pedroLinkName"
+                })
             break;
 
             case '2': /*Cauã*/
