@@ -87,6 +87,7 @@ header button
     height: 20vh;
     width: 35vw;
     z-index: 2;
+    transition: all 1s ease;
 }
 
 .input-container 
@@ -94,6 +95,7 @@ header button
     color: var(--bg-color-secundary);
     position: relative;
     width: 35vw; 
+
 }
 
 input 
