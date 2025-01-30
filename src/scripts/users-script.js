@@ -69,7 +69,7 @@ const userSites = {
             href: "https://www.nexusmods.com/skyrimspecialedition", 
             src: "src/assets/nexusmods.png", 
             alt: "nexusmods logo", 
-            name: "Nexusmods" 
+            name: "Nexus" 
         },
     ],
     '1': [ /*Pedro*/
@@ -165,7 +165,7 @@ const userSites = {
             href: "https://www.nexusmods.com/skyrimspecialedition", 
             src: "src/assets/nexusmods.png", 
             alt: "nexusmods logo", 
-            name: "Nexusmods" 
+            name: "Nexus" 
         },
     ],
     '4': [/*Laudice*/
@@ -229,7 +229,7 @@ const userSites = {
             href: "https://www.nexusmods.com/skyrimspecialedition", 
             src: "src/assets/nexusmods.png", 
             alt: "nexusmods logo", 
-            name: "Nexusmods" 
+            name: "Nexus" 
         },
     ]
 };

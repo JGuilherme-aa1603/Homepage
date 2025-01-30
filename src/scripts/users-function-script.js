@@ -87,6 +87,9 @@ document.addEventListener("DOMContentLoaded", function()
             case '5': /*Dorgival*/
                 principal.id = "dorgivalPrincipal";
                 sites.id = "dorgivalSites"
+                link.forEach(link => {
+                    link.id = "dorgivalLink"
+                })
             break;
         }   
         /* Saves userid if the valor is exchanged */

@@ -3,7 +3,7 @@
     .principal
     {
         height: 10vh;
-        width: 100vw;
+        width: 95vw;
     }
 
     .input-container
@@ -14,12 +14,61 @@
     .sites
     {
         height: 100%;
-        width: 100%;
+        width: 85%;
+        flex-wrap: nowrap;
     }
 
     .sites a
     {
-        width: 18%;
-        max-width: 18%;
+        width: 15%;
+        height: 80%;
+    }
+
+    #pedroPrincipal
+    {
+        bottom: 5%;
+    }
+
+    #pedroSites
+    {
+        top:15%;
+    }
+
+    #pedroLink
+    {
+        height: 13vw;
+        width: 13vw;
+    }
+
+    #cauaPrincipal
+    {
+        top: 20%;
+    }
+    #cauaLink
+    {
+        height: 13vw;
+        width: 13vw;
+    }
+
+    #iunahPrincipal
+    {
+        bottom: 15%;
+    }
+
+
+    #dorgivalPrincipal
+    {
+        top: 15%;
+    }
+
+    #dorgivalSites
+    {
+        top: 80%;
+    }
+
+    #dorgivalLink
+    {
+        height: 16vw;
+        width: 12vw;
     }
 }
