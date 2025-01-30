@@ -237,7 +237,7 @@ footer
 {
     display: flex;
     flex-wrap: wrap-reverse;
-    max-width: 215px;
+    max-width: 220px;
     height: auto;
     align-items: center;
     gap: 1vw;
