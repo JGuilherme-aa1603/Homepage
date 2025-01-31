@@ -33,6 +33,7 @@
     #pedroSites
     {
         top:20%;
+        z-index: -1;
     }
 
     #pedroLink
