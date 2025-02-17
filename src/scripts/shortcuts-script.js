@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function()
 {
-    site = document.querySelector(".sites").querySelectorAll("a")
+    site = document.querySelector(".sites").querySelectorAll("a");
 
     const shortcuts = {
         'F1': () => window.userUI('0'),
@@ -25,13 +25,14 @@ document.addEventListener("DOMContentLoaded", function()
                 if (index >= 0 && index < site.length) 
                 {
                     window.location.href = site[index].href;
-                }
+                };
         },
     };
   
     document.addEventListener('keydown', function(event) {
 
-        if (document.activeElement.tagName === "INPUT" || document.activeElement.tagName === "TEXTAREA") {
+        if (document.activeElement.tagName === "INPUT" || document.activeElement.tagName === "TEXTAREA") 
+        {
             return;
         }
 
@@ -45,8 +46,8 @@ document.addEventListener("DOMContentLoaded", function()
             keyCombo += event.key;
 
 
-            if (keyCombo.startsWith('Alt+')) {
-
+            if (keyCombo.startsWith('Alt+')) 
+            {
                 let num = event.key;
                 shortcuts['Alt+num'](num);
                 event.preventDefault();

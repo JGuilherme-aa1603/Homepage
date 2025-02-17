@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function()
         footerButton.forEach(footerButton => {
             footerButton.style.backgroundColor = "var(--bg-color-main)";
         });
-
     }
 
     window.userUI = function(userid)
@@ -93,16 +92,17 @@ document.addEventListener("DOMContentLoaded", function()
             break;
         }   
         /* Saves userid if the valor is exchanged */
-        if (localStorage.getItem("userid") !== userid) {
+        if (localStorage.getItem("userid") !== userid) 
+        {
             localStorage.setItem("userid", userid);
         }
         console.log(userid)
     }
     userUI(userid)
 
-    for (let i = 0; i < footerButton.length; i++)
+    for (let i = 0; i < footerButton.length; i++) 
     {
-        footerButton[i].addEventListener("click", function()
+        footerButton[i].addEventListener("click", function() 
         {
             userUI('' + i);
         });

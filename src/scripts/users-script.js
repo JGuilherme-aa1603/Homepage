@@ -22,7 +22,7 @@ const users = {
     {
         background: "url(src/assets/wallpaperi.jpg)",
         image: "src/assets/useri.png",
-        link: "https://www.instagram.com/iunahhh/"
+        link: "https://github.com/JGuilherme-aa1603"
     },
     '4': /*Laudice*/
     {
@@ -34,7 +34,7 @@ const users = {
     {
         background: "url(src/assets/wallpaperd.jpg)",
         image: "src/assets/userd.png",
-        link: "https://www.linkedin.com/in/pedro-almeida-2a0051222/"
+        link: "https://github.com/JGuilherme-aa1603"
     },
 };
 
