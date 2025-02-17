@@ -103,8 +103,8 @@ document.addEventListener("DOMContentLoaded", function()
     for (let i = 0; i < footerButton.length; i++)
     {
         footerButton[i].addEventListener("click", function()
-    {
-        userUI('' + i);
-    });
+        {
+            userUI('' + i);
+        });
     }
 });
