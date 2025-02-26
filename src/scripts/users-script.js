@@ -98,10 +98,10 @@ const userSites = {
             name: "P. Gaming" 
         },
         { 
-            href: "https://chatgpt.com/", 
-            src: "src/assets/chatgpt.png", 
-            alt: "chatgpt logo", 
-            name: "ChatGpt" 
+            href: "https://m365.cloud.microsoft/?auth=2", 
+            src: "https://aadcdn.msauth.net/shared/1.0/content/images/favicon_a_eupayfgghqiai7k9sol6lg2.ico", 
+            alt: "Microsoft logo", 
+            name: "Microsoft 365" 
         },
     ],
     '2': [ /*Cauã*/
